@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import homePagePic from "../../assets/homePage.png";
 import missionPagePic from "../../assets/missionPage.png";
 import { FaTelegram } from "react-icons/fa";
@@ -42,17 +42,19 @@ const BasicLayout: React.FC<BasicLayoutProps> = ({ children }) => {
         </div> */}
       </nav>
       {/* Main Content */}
-      <main className="flex-grow">{children}</main>
+      <main className="w-full flex-grow">{children}</main>
       {/* Footer */}
-      <footer className="flex h-[72px] w-full max-w-[1200px] items-center justify-between">
-        <div className="text-sm text-[#7C7C7C]">
-          © 2024 Payments Accelerated, Inc.
-        </div>
-        <div className="flex gap-4 text-gray">
-          <FaTelegram className="h-6 w-6 cursor-pointer" />
-          <FaXTwitter className="h-6 w-6 cursor-pointer" />
-        </div>
-      </footer>
+      {location.pathname === "/" && (
+        <footer className="flex h-[72px] w-full max-w-[1200px] items-center justify-between">
+          <div className="text-sm text-[#7C7C7C]">
+            © 2024 Payments Accelerated, Inc.
+          </div>
+          <div className="flex gap-4 text-gray">
+            <FaTelegram className="h-6 w-6 cursor-pointer" />
+            <FaXTwitter className="h-6 w-6 cursor-pointer" />
+          </div>
+        </footer>
+      )}
     </div>
   );
 };

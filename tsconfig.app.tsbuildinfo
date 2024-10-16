@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/dailypoint.tsx","./src/components/homepage.tsx","./src/components/missionpage.tsx","./src/components/referralcard.tsx","./src/components/taskcard.tsx","./src/components/layout/basiclayout.tsx"],"version":"5.6.3"}

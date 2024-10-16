@@ -19,6 +19,7 @@ export default {
       },
       fontFamily: {
         'chakra': ['"Chakra Petch"', 'sans-serif'],
+        'poppins': ['"Poppins"', 'sans-serif'],
       },
       fontSize: {
         sm: [
@@ -32,6 +33,18 @@ export default {
           "64px",
           {
             lineHeight: "80px",
+          },
+        ],
+        subtitle: [
+          "40px",
+          {
+            lineHeight: "60px",
+          },
+        ],
+        content: [
+          "32px",
+          {
+            lineHeight: "48px",
           },
         ],
       }

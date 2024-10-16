@@ -6,16 +6,15 @@ import nietzsche from "../assets/logos/nietzsche.svg";
 import lumi from "../assets/logos/lumi.svg";
 import { PiRocketLaunch } from "react-icons/pi";
 import { MdArrowForward } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const HomePage: React.FC = () => {
+  const navigate = useNavigate();
   const partners = [atalog, capsule, luminous, nietzsche, lumi];
   return (
     <div className="flex h-[calc(100vh-144px)] w-full flex-col items-center justify-center">
       <main className="flex w-full flex-col items-center justify-center p-8 text-center">
-        <button
-          // onClick={onClick}
-          className="mb-4 flex items-center gap-2 rounded-full border border-[#27272A] bg-[#FFFFFF05] px-4 py-2 shadow-sm backdrop-blur-md"
-        >
+        <div className="mb-4 flex items-center gap-2 rounded-full border border-[#27272A] bg-[#FFFFFF05] px-4 py-2 shadow-sm backdrop-blur-md">
           <div className="bg-gray-gradient flex items-center gap-2 rounded-full px-4 py-2">
             <PiRocketLaunch className="text-[#FF7A00]" size={14} />
             <span className="text-xs font-semibold">ODYSSEY</span>
@@ -23,7 +22,7 @@ const HomePage: React.FC = () => {
           <span className="text-sm text-[#FAFAFA]">
             Start your adventure now!
           </span>
-        </button>
+        </div>
         <h1 className="text-title bg-text-gray-gradient bg-clip-text text-transparent">
           Payments Acceleration Nodes
         </h1>
@@ -35,7 +34,12 @@ const HomePage: React.FC = () => {
           secure, and permissionless with the Lightning Network.
         </p>
         <div className="mt-4 flex gap-4">
-          <button className="flex h-[54px] cursor-pointer items-center gap-2 rounded-2xl bg-[#FF7A00] px-6 text-xl font-extrabold text-white transition-opacity hover:opacity-80">
+          <button
+            onClick={() => {
+              navigate("/mission");
+            }}
+            className="flex h-[54px] cursor-pointer items-center gap-2 rounded-2xl bg-[#FF7A00] px-6 text-xl font-extrabold text-white transition-opacity hover:opacity-80"
+          >
             Start Journey
             <MdArrowForward size={24} />
           </button>
